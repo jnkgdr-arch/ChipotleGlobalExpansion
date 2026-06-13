@@ -1,9 +1,3 @@
-diff --git a/script.js b/script.js
-new file mode 100644
-index 0000000000000000000000000000000000000000..74eacfbc8137ee0c70c378d1e6c64299f8cb1803
---- /dev/null
- b/script.js
-@@ -0,0 1,327 @@
 const chartData = {
   imports: {
     title: 'BRI food import value growth',
