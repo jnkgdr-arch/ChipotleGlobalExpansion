@@ -1,0 +1,262 @@
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..9c882f89ab4f23d58061bdefd8591e313a024a3e
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,256 @@
++<!doctype html>
++<html lang="en">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>Chipotle China Expansion Strategy | Executive Dashboard</title>
++    <link rel="preconnect" href="https://fonts.googleapis.com" />
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
++    <link rel="stylesheet" href="styles.css" />
++  </head>
++  <body>
++    <div class="ambient ambient-one"></div>
++    <div class="ambient ambient-two"></div>
++
++    <header class="hero" id="top">
++      <nav class="nav" aria-label="Primary navigation">
++        <a class="brand" href="#top" aria-label="Chipotle China strategy home">
++          <span class="brand-mark">中</span>
++          <span>Chipotle × China</span>
++        </a>
++        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
++        <div class="nav-links" id="nav-links">
++          <a href="#market">Market</a>
++          <a href="#culinary-bridge">Visuals</a>
++          <a href="#culture">Culture</a>
++          <a href="#strategies">Strategies</a>
++          <a href="#recommendation">Recommendation</a>
++        </div>
++      </nav>
++
++      <section class="hero-grid reveal">
++        <div class="hero-copy">
++          <p class="eyebrow">MRKT 454 7380 Global Marketing · UMGC · 05/06/2025</p>
++          <h1>Strategizing successful ways for Chipotle’s global expansion to China</h1>
++          <p class="hero-subtitle">
++            An executive-ready interactive dashboard translating cultural adaptation, culinary experience, and China market dynamics into a clear launch strategy.
++          </p>
++          <div class="hero-actions">
++            <a class="button primary" href="#recommendation">See recommendation</a>
++            <a class="button secondary" href="#strategies">Compare strategies</a>
++          </div>
++          <div class="presenter-card">
++            <span>Presented by</span>
++            <strong>Janelle Gardner</strong>
++            <small>Professor Marine</small>
++          </div>
++        </div>
++        <div class="hero-panel" aria-label="Executive summary metrics">
++          <div class="hero-photo-stack" aria-label="Food photography showing Chinese dining cues and Chipotle menu inspiration">
++            <img class="hero-photo hero-photo-main" src="assets/images/chinese-rice-bowl-glazed.jpg" alt="Glazed rice bowl with Chinese-inspired sauce, sesame seeds, tea, and shared side dishes" />
++            <img class="hero-photo hero-photo-chipotle" src="assets/images/chipotle-bowl.jpg" alt="Chipotle-style burrito bowl with beans, guacamole, corn salsa, rice, chips, and sour cream" />
++            <img class="hero-photo hero-photo-communal" src="assets/images/chinese-communal-table.jpg" alt="Communal Chinese table setting with rice bowls, tea, mahjong tiles, and shared sides" />
++          </div>
++          <div class="score-ring" data-score="86">
++            <svg viewBox="0 0 120 120" role="img" aria-label="Recommended localization fit score 86 out of 100">
++              <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
++              <circle class="ring-progress" cx="60" cy="60" r="52"></circle>
++            </svg>
++            <div>
++              <strong>86</strong>
++              <span>Localization fit</span>
++            </div>
++          </div>
++          <div class="metric-row">
++            <div><strong>$47.9B</strong><span>BRI food imports in 2021</span></div>
++            <div><strong>23.5%</strong><span>BRI share of food imports</span></div>
++          </div>
++          <p class="panel-note">Core thesis: Chipotle can win by adapting flavors, formats, pricing, and digital ordering while preserving freshness and ingredient transparency.</p>
++        </div>
++      </section>
++    </header>
++
++    <main>
++      <section class="section problem reveal" id="problem">
++        <div class="section-heading">
++          <p class="eyebrow">Problem statement</p>
++          <h2>Standardized Mexican-inspired offerings conflict with traditional flavor and communal dining expectations.</h2>
++        </div>
++        <div class="problem-cards">
++          <article>
++            <span class="icon">🥢</span>
++            <h3>Cultural identity</h3>
++            <p>Food symbolizes culture and tradition; local brands can signal values that global brands must earn through adaptation.</p>
++          </article>
++          <article>
++            <span class="icon">🏮</span>
++            <h3>Western avoidance</h3>
++            <p>Chinese companies often use traditional cultural elements to respond to consumers who resist excessive Western influence.</p>
++          </article>
++          <article>
++            <span class="icon">👨‍👩‍👧‍👦</span>
++            <h3>Shared dining</h3>
++            <p>Individual bowls and unfamiliar flavors can feel misaligned with common preferences for affordable communal meals.</p>
++          </article>
++        </div>
++      </section>
++
++      <section class="section photo-strategy reveal" id="culinary-bridge">
++        <div class="section-heading split">
++          <div>
++            <p class="eyebrow">Culinary bridge</p>
++            <h2>Use food photography to show the strategic shift: from foreign novelty to familiar freshness.</h2>
++          </div>
++          <p>These visuals anchor the menu recommendation: keep Chipotle’s customizable format, then layer in Chinese flavor cues, shared portions, and local dining rituals.</p>
++        </div>
++        <div class="photo-grid" aria-label="Photo-led menu adaptation storyboard">
++          <figure class="photo-card large">
++            <img src="assets/images/chinese-shared-dishes-noodles.jpg" alt="Chinese shared dishes with noodles, tofu in red broth, and black chopsticks" />
++            <figcaption><strong>Local dining cues</strong><span>Shared plates, noodle bowls, tofu, greens, chopsticks, and vivid broths signal familiarity and cultural respect.</span></figcaption>
++          </figure>
++          <figure class="photo-card">
++            <img src="assets/images/tacos-shareable.jpg" alt="Hands holding two tacos over a table with limes and shared plates" />
++            <figcaption><strong>Shareable moments</strong><span>Tacos and family bundles can make Chipotle feel more communal.</span></figcaption>
++          </figure>
++          <figure class="photo-card">
++            <img src="assets/images/burrito-closeup.jpg" alt="Close-up of a burrito with peppers, rice, grilled protein, and lime wedges" />
++            <figcaption><strong>Portable convenience</strong><span>Burritos fit delivery and QR-ordering habits in urban centers.</span></figcaption>
++          </figure>
++        </div>
++      </section>
++
++      <section class="section dashboard reveal" id="market">
++        <div class="section-heading split">
++          <div>
++            <p class="eyebrow">Market dashboard</p>
++            <h2>China’s food service opportunity is attractive—but operationally and culturally complex.</h2>
++          </div>
++          <p>Use the chart tabs to scan import momentum, consumer fit, and entry risk at executive speed.</p>
++        </div>
++
++        <div class="chart-shell">
++          <div class="chart-tabs" role="tablist" aria-label="Market chart selector">
++            <button class="tab active" data-chart="imports" role="tab" aria-selected="true">BRI import growth</button>
++            <button class="tab" data-chart="fit" role="tab" aria-selected="false">Consumer fit</button>
++            <button class="tab" data-chart="risk" role="tab" aria-selected="false">Entry risk</button>
++          </div>
++          <div class="chart-stage">
++            <canvas id="mainChart" width="980" height="430" aria-label="Interactive market chart" role="img"></canvas>
++            <div class="chart-insight" id="chartInsight"></div>
++          </div>
++        </div>
++
++        <div class="kpi-grid">
++          <div class="kpi-card"><span>2013 → 2021</span><strong>+162%</strong><p>BRI food-import value growth from $18.3B to $47.9B.</p></div>
++          <div class="kpi-card"><span>Consumer behavior</span><strong>Digital-first</strong><p>Online delivery and QR ordering support a tech-forward launch.</p></div>
++          <div class="kpi-card"><span>Trust lever</span><strong>Transparency</strong><p>Foreign brand halo must be reinforced with visible sourcing standards.</p></div>
++          <div class="kpi-card"><span>Pricing guardrail</span><strong>Value</strong><p>Above local fast food, below premium Western brands, avoiding unlucky “4.”</p></div>
++        </div>
++      </section>
++
++      <section class="section culture reveal" id="culture">
++        <div class="section-heading split">
++          <div>
++            <p class="eyebrow">Cultural adaptation</p>
++            <h2>What must change for Chipotle to feel locally relevant?</h2>
++          </div>
++          <p>The adaptation heatmap translates research themes into business actions.</p>
++        </div>
++        <div class="culture-layout">
++          <div class="heatmap" aria-label="Adaptation priority heatmap">
++            <div class="heat-row head"><span>Factor</span><span>Risk if ignored</span><span>Priority</span></div>
++            <div class="heat-row" style="--level: 94"><span>Traditional flavors</span><span>High rejection</span><b>94</b></div>
++            <div class="heat-row" style="--level: 90"><span>Communal meals</span><span>Format mismatch</span><b>90</b></div>
++            <div class="heat-row" style="--level: 84"><span>Food safety trust</span><span>Credibility gap</span><b>84</b></div>
++            <div class="heat-row" style="--level: 78"><span>Price-value fit</span><span>Adoption barrier</span><b>78</b></div>
++            <div class="heat-row" style="--level: 74"><span>Digital convenience</span><span>Lost traffic</span><b>74</b></div>
++          </div>
++          <div class="menu-card">
++            <img class="menu-photo" src="assets/images/chinese-rice-bowl-glazed.jpg" alt="Chinese-inspired glazed protein rice bowl that suggests a localized Chipotle family bowl" />
++            <p class="eyebrow">Prototype offer</p>
++            <h3>Sichuan Pepper Steak Family Bowl</h3>
++            <p>A localized, shareable format that keeps Chipotle’s customizable DNA while adding Chinese-inspired flavor familiarity.</p>
++            <div class="ingredient-bars">
++              <div><span>Sichuan spice</span><i style="--w: 92%"></i></div>
++              <div><span>Fresh vegetables</span><i style="--w: 86%"></i></div>
++              <div><span>Lean protein</span><i style="--w: 80%"></i></div>
++              <div><span>Shareability</span><i style="--w: 94%"></i></div>
++            </div>
++          </div>
++        </div>
++      </section>
++
++      <section class="section reveal" id="swot">
++        <div class="section-heading">
++          <p class="eyebrow">S.W.O.T analysis</p>
++          <h2>Chipotle’s strengths can travel, but the operating model must localize.</h2>
++        </div>
++        <div class="swot-grid">
++          <article class="swot strength"><h3>Strengths</h3><ul><li>Strong brand identity</li><li>Fresh, simple, nutritious meals</li><li>Customizable ingredients</li><li>Health-conscious positioning</li></ul></article>
++          <article class="swot weakness"><h3>Weaknesses</h3><ul><li>Individual-serving format</li><li>Low recognition in China</li><li>Potential menu inflexibility</li><li>Imported ingredient cost exposure</li></ul></article>
++          <article class="swot opportunity"><h3>Opportunities</h3><ul><li>Urban middle-class demand</li><li>Delivery and QR ecosystems</li><li>BRI sourcing efficiency</li><li>Rising wellness interest</li></ul></article>
++          <article class="swot threat"><h3>Threats</h3><ul><li>Local competition</li><li>High risk avoidance</li><li>Regulatory complexity</li><li>Spoilage or supply inconsistency</li></ul></article>
++        </div>
++      </section>
++
++      <section class="section strategies reveal" id="strategies">
++        <div class="section-heading split">
++          <div>
++            <p class="eyebrow">Strategic alternatives</p>
++            <h2>Compare three entry paths using weighted executive criteria.</h2>
++          </div>
++          <p>Click a strategy card to update the scorecard and recommendation logic.</p>
++        </div>
++        <div class="strategy-layout">
++          <div class="strategy-cards" role="list">
++            <button class="strategy-card active" data-strategy="localize" role="listitem">
++              <span>01</span><h3>Localize menu</h3><p>Chinese-inspired flavors, family meal options, direct outlets, culinary R&D partnerships.</p>
++            </button>
++            <button class="strategy-card" data-strategy="partner" role="listitem">
++              <span>02</span><h3>Joint venture</h3><p>Partner with Quanjude, Haidilao, Xiabu Xiabu, Yum China, distributors, or tech platforms.</p>
++            </button>
++            <button class="strategy-card" data-strategy="popup" role="listitem">
++              <span>03</span><h3>Pop-ups + influencers</h3><p>Shanghai and Beijing pilots with localized items, social buzz, app delivery, and rapid feedback.</p>
++            </button>
++          </div>
++          <div class="scorecard">
++            <canvas id="strategyChart" width="620" height="420" aria-label="Strategy score radar chart" role="img"></canvas>
++            <div class="score-copy" id="scoreCopy"></div>
++          </div>
++        </div>
++      </section>
++
++      <section class="section roadmap reveal" id="recommendation">
++        <div class="section-heading split">
++          <div>
++            <p class="eyebrow">Recommendation</p>
++            <h2>Lead with menu localization, then scale through digital convenience and influencer trust.</h2>
++          </div>
++          <p>Recommended launch sequence: test, prove, scale.</p>
++        </div>
++        <div class="roadmap-track">
++          <div class="roadmap-step"><span>1</span><h3>Localize</h3><p>Launch Sichuan pepper steak, mild regional sauces, fresh vegetable builds, and family meal bundles.</p></div>
++          <div class="roadmap-step"><span>2</span><h3>Price for adoption</h3><p>Use competitive price endings with lucky “8” and avoid culturally negative “4.”</p></div>
++          <div class="roadmap-step"><span>3</span><h3>Go urban + digital</h3><p>Start in Shanghai and Beijing with QR ordering, delivery apps, and streamlined pickup.</p></div>
++          <div class="roadmap-step"><span>4</span><h3>Build trust</h3><p>Partner with influencers and make ingredient transparency visible in-store and online.</p></div>
++        </div>
++
++        <div class="executive-callout">
++          <div>
++            <p class="eyebrow">Executive decision</p>
++            <h3>Adapt the offer without abandoning Chipotle’s core promise.</h3>
++            <p>Chipotle should preserve freshness, customization, and nutritious simplicity while changing flavor architecture, dining format, and digital access to match Chinese consumer expectations.</p>
++          </div>
++          <a class="button primary" href="#top">Back to top</a>
++        </div>
++      </section>
++    </main>
++
++    <footer class="footer">
++      <p>Sources synthesized from project research: He, Jiaxun, & Wang, Cheng Lu (2015); Özsomer (2012); Wan, Cheng, Lin & Xiaohua (2009); Zhu, Jing, Liu, Xingyu, & Cao, Lijuan (2025); Knight et al. (2008); Grundey (2007); Marks (2015); Karsaklian (2024); Kuanr et al. (2021).</p>
++    </footer>
++
++    <script src="script.js"></script>
++  </body>
++</html>
