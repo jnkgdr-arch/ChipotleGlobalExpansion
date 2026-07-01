@@ -298,3 +298,40 @@ canvas { width: 100%; height: auto; display: block; }
   .hero-photo-chipotle, .hero-photo-communal { height: 7.4rem; }
   .photo-card, .photo-card.large { min-height: 20rem; }
 }
+
+.bri-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.bri-card {
+  padding: 1.25rem;
+  border-radius: 1.35rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.bri-card span {
+  color: var(--muted);
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  font-weight: 900;
+}
+.bri-card strong {
+  display: block;
+  margin: .45rem 0;
+  font-size: 1.45rem;
+  color: var(--chipotle-red);
+}
+.bri-card p { color: var(--muted); line-height: 1.55; margin-bottom: 0; }
+.bri-card.highlight { border-top: 6px solid var(--jade); }
+.bri-card.projection { border-top: 6px solid var(--gold); }
+.footer h2 { margin-bottom: 1rem; }
+.references-list { padding-left: 1.2rem; margin: 0; }
+.references-list li { margin: .65rem 0; line-height: 1.55; }
+
+@media (max-width: 900px) {
+  .bri-grid { grid-template-columns: 1fr; }
+}

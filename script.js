@@ -5,7 +5,7 @@ const chartData = {
     labels: ['2013', '2015', '2017', '2019', '2021'],
     values: [18.3, 24.8, 31.6, 39.4, 47.9],
     suffix: 'B',
-    insight: '<strong>Supply tailwind:</strong> BRI food imports increased from $18.3B to $47.9B, indicating stronger trade infrastructure and potential sourcing flexibility.'
+    insight: '<strong>Supply tailwind:</strong> BRI food imports increased from $18.3B to $47.9B, giving Chipotle a stronger sourcing story for China through diversified ingredients, fewer logistics bottlenecks, and pilot-store cost control.'
   },
   fit: {
     title: 'Consumer fit by adaptation lever',
