@@ -4,7 +4,7 @@
   --pepper: #ffe8a3;
   --cream: #ffe8a3;
   --gold: #ffe8a3;
-  --jade: #7bd9a8;
+  --jade: #00ff85;
   --ink: #ffe8a3;
   --muted: #ffe8a3;
   --card: rgba(255, 218, 94, 0.22);
@@ -132,12 +132,14 @@ canvas { width: 100%; height: auto; display: block; }
 .kpi-card strong { display: block; margin: .45rem 0; font-size: 1.5rem; color: var(--chipotle-red); }
 
 .culture-layout, .strategy-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, .62fr); gap: 1rem; align-items: stretch; }
-.heatmap { border-radius: 1.6rem; overflow: hidden; border: 1px solid var(--line); background: var(--glass-yellow); }
-.heat-row { display: grid; grid-template-columns: 1.05fr 1fr 80px; gap: 1rem; align-items: center; padding: 1rem 1.1rem; border-bottom: 1px solid var(--line); position: relative; isolation: isolate; font-weight: 800; }
-.heat-row::before { content: ""; position: absolute; inset: 0 auto 0 0; width: calc(var(--level, 0) * 1%); background: linear-gradient(90deg, rgba(19,149,106,.22), rgba(242,170,46,.24), rgba(168,22,18,.18)); z-index: -1; transform-origin: left; animation: growWidth 1.3s ease both; }
-.heat-row.head { background: var(--glass-yellow); color: var(--chipotle-brown); }
-.heat-row.head::before { display: none; }
-.heat-row b { color: var(--chipotle-red); font-size: 1.35rem; }
+.donut-grid { display: grid; grid-template-columns: repeat(5, minmax(7.4rem, 1fr)); gap: .85rem; }
+.donut-card { padding: 1rem; border-radius: 1.4rem; background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); backdrop-filter: blur(16px); text-align: center; }
+.donut-card h3 { min-height: 2.7rem; margin-bottom: .8rem; font-size: .98rem; line-height: 1.2; color: var(--chipotle-brown); }
+.donut { position: relative; width: min(100%, 8.8rem); aspect-ratio: 1; margin: 0 auto; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(var(--jade) calc(var(--score) * 1%), rgba(255, 232, 163, .18) 0); box-shadow: 0 0 24px rgba(0,255,133,.28); }
+.donut::before { content: ""; width: 68%; aspect-ratio: 1; border-radius: 50%; background: #540917; box-shadow: inset 0 0 0 1px rgba(255,232,163,.24); }
+.donut > div { position: absolute; width: 6.4rem; display: grid; gap: .1rem; place-items: center; }
+.donut span, .donut em { font-size: .72rem; line-height: 1.12; font-weight: 900; font-style: normal; }
+.donut strong { font-size: 1.55rem; line-height: 1; color: var(--chipotle-brown); }
 .menu-card { padding: 1.6rem; border-radius: 1.6rem; }
 .ingredient-bars div { margin-top: 1rem; }
 .ingredient-bars span { display: flex; justify-content: space-between; color: var(--chipotle-brown); font-weight: 900; margin-bottom: .45rem; }
@@ -162,7 +164,7 @@ canvas { width: 100%; height: auto; display: block; }
 
 .roadmap-track { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; position: relative; }
 .roadmap-step { padding: 1.25rem; border-radius: 1.4rem; }
-.roadmap-step span { display: grid; place-items: center; width: 2.7rem; height: 2.7rem; border-radius: 50%; background: var(--chipotle-red); color: var(--chipotle-brown); font-weight: 900; margin-bottom: 1rem; }
+.roadmap-step span { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 50%; background: var(--chipotle-brown); color: #540917; font-weight: 900; margin-bottom: 1rem; font-size: 1.2rem; line-height: 1; }
 .executive-callout { margin-top: 1rem; border-radius: 1.8rem; padding: 1.5rem; display: flex; justify-content: space-between; gap: 1rem; align-items: center; background: linear-gradient(135deg, rgba(255, 218, 94, .24), rgba(255, 184, 70, .18)); }
 .executive-callout h3, .executive-callout p { color: var(--chipotle-brown); }
 .executive-callout .eyebrow { color: var(--chipotle-brown); }
@@ -181,12 +183,12 @@ canvas { width: 100%; height: auto; display: block; }
   .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
   .hero-grid, .section-heading.split, .culture-layout, .strategy-layout, .chart-stage { grid-template-columns: 1fr; }
   .problem-cards, .kpi-grid, .swot-grid, .roadmap-track { grid-template-columns: repeat(2, 1fr); }
+  .donut-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 620px) {
   .hero-grid, .section { padding: 2.5rem 1rem; }
-  .problem-cards, .kpi-grid, .swot-grid, .roadmap-track, .metric-row { grid-template-columns: 1fr; }
-  .heat-row { grid-template-columns: 1fr; gap: .25rem; }
+  .problem-cards, .kpi-grid, .swot-grid, .roadmap-track, .metric-row, .donut-grid { grid-template-columns: 1fr; }
   .executive-callout { flex-direction: column; align-items: flex-start; }
   h1 { font-size: 3.1rem; }
 }
@@ -352,6 +354,6 @@ canvas { width: 100%; height: auto; display: block; }
   box-shadow: var(--shadow);
   backdrop-filter: blur(16px);
 }
-.bri-card, .photo-card, .chart-shell, .heatmap {
+.bri-card, .photo-card, .chart-shell, .donut-grid {
   backdrop-filter: blur(16px);
 }

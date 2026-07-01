@@ -103,8 +103,8 @@ function drawMainChart(progress = 1) {
     }));
 
     const gradient = mainCtx.createLinearGradient(0, pad, 0, height - pad);
-    gradient.addColorStop(0, 'rgba(19,149,106,.28)');
-    gradient.addColorStop(1, 'rgba(19,149,106,0)');
+    gradient.addColorStop(0, 'rgba(0,255,133,.36)');
+    gradient.addColorStop(1, 'rgba(0,255,133,0)');
 
     mainCtx.beginPath();
     mainCtx.moveTo(points[0].x, height - pad);
@@ -144,8 +144,8 @@ function drawMainChart(progress = 1) {
       const barHeight = (value / max) * chartHeight * progress;
       const y = height - pad - barHeight;
       const gradient = mainCtx.createLinearGradient(0, y, 0, height - pad);
-      gradient.addColorStop(0, currentChart === 'risk' ? cssVar('--chipotle-red') : cssVar('--jade'));
-      gradient.addColorStop(1, cssVar('--gold'));
+      gradient.addColorStop(0, currentChart === 'risk' ? '#126dff' : cssVar('--jade'));
+      gradient.addColorStop(1, currentChart === 'risk' ? cssVar('--gold') : cssVar('--gold'));
       roundRect(mainCtx, x, y, barWidth, barHeight, 14, gradient);
       labelPoint(x + barWidth / 2, y - 14, `${value}${data.suffix}`);
       labelAxis(x + 4, height - 26, data.labels[index], barWidth - 8);
@@ -229,8 +229,8 @@ function drawStrategyChart(progress = 1) {
     strategyCtx.moveTo(centerX, centerY);
     strategyCtx.lineTo(centerX + Math.cos(angle) * radius, centerY + Math.sin(angle) * radius);
     strategyCtx.stroke();
-    strategyCtx.fillStyle = 'rgba(35,17,13,.76)';
-    strategyCtx.font = '800 14px Inter, sans-serif';
+    strategyCtx.fillStyle = '#fff200';
+    strategyCtx.font = '900 14px Inter, sans-serif';
     strategyCtx.fillText(label, centerX + Math.cos(angle) * (radius + 48), centerY + Math.sin(angle) * (radius + 32));
   });
 
@@ -244,7 +244,7 @@ function drawStrategyChart(progress = 1) {
     else strategyCtx.lineTo(x, y);
   });
   strategyCtx.closePath();
-  strategyCtx.fillStyle = 'rgba(19,149,106,.24)';
+  strategyCtx.fillStyle = 'rgba(0,255,133,.28)';
   strategyCtx.strokeStyle = cssVar('--jade');
   strategyCtx.lineWidth = 4;
   strategyCtx.fill();
