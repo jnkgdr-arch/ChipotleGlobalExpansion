@@ -163,8 +163,8 @@ function labelPoint(x, y, text) {
 }
 
 function labelAxis(x, y, text, maxWidth = 95) {
-  mainCtx.fillStyle = 'rgba(35,17,13,.72)';
-  mainCtx.font = '700 15px Inter, sans-serif';
+  mainCtx.fillStyle = '#ffe8a3';
+  mainCtx.font = '900 15px Inter, sans-serif';
   mainCtx.textAlign = 'left';
 
   const words = text.split(' ');
