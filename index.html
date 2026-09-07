@@ -51,21 +51,10 @@
             <img class="hero-photo hero-photo-chipotle" src="assets/burrito-bowl.jpg" alt="Chipotle-style burrito bowl with beans, guacamole, corn salsa, rice, chips, and sour cream" />
             <img class="hero-photo hero-photo-communal" src="assets/chinese-rice-bowl.jpg" alt="Communal Chinese table setting with rice bowls, tea, mahjong tiles, and shared sides" />
           </div>
-          <div class="score-ring" data-score="86">
-            <svg viewBox="0 0 120 120" role="img" aria-label="Recommended localization fit score 86 out of 100">
-              <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
-              <circle class="ring-progress" cx="60" cy="60" r="52"></circle>
-            </svg>
-            <div>
-              <strong>86</strong>
-              <span>Localization fit</span>
-            </div>
-          </div>
           <div class="metric-row">
+            <div><strong>86</strong><span>Localization fit</span></div>
             <div><strong>$47.9B</strong><span>BRI food imports in 2021</span></div>
             <div><strong>23.5%</strong><span>BRI share of food imports</span></div>
-            <div><strong>$11.8M</strong><span>Projected year-1 China sales</span></div>
-            <div><strong>$95M</strong><span>5-year upside potential</span></div>
           </div>
           <p class="panel-note">Core thesis: Chipotle can win by adapting flavors, formats, pricing, and digital ordering while preserving freshness and ingredient transparency.</p>
         </div>
@@ -137,34 +126,44 @@
             <button class="tab" data-chart="risk" role="tab" aria-selected="false">Entry risk</button>
           </div>
           <div class="chart-stage">
-            <canvas id="mainChart" width="980" height="430" aria-label="Interactive market chart" role="img"></canvas>
+            <canvas id="mainChart" width="980" height="300" aria-label="Interactive market chart" role="img"></canvas>
             <div class="chart-insight" id="chartInsight"></div>
           </div>
         </div>
 
-        <div class="kpi-grid">
-          <div class="kpi-card"><span>2013 → 2021</span><strong>162%</strong><p>BRI food-import value growth from $18.3B to $47.9B.</p></div>
-          <div class="kpi-card"><span>Consumer behavior</span><strong>Digital-first</strong><p>Online delivery and QR ordering support a tech-forward launch.</p></div>
-          <div class="kpi-card"><span>Trust lever</span><strong>Transparency</strong><p>Foreign brand halo must be reinforced with visible sourcing standards.</p></div>
-          <div class="kpi-card"><span>Pricing guardrail</span><strong>Value</strong><p>Above local fast food, below premium Western brands, avoiding unlucky “4.”</p></div>
-        </div>
-
-        <div class="bri-grid" aria-label="BRI opportunity model for Chipotle">
-          <article class="bri-card">
-            <span>BRI means</span>
-            <strong>Belt and Road Initiative</strong>
-            <p>China-led infrastructure, trade, and regulatory-connectivity strategy launched in 2013; it has helped expand food imports from partner nations from $18.3B in 2013 to $47.9B in 2021.</p>
-          </article>
-          <article class="bri-card highlight">
-            <span>Chipotle connection</span>
-            <strong>More flexible sourcing</strong>
-            <p>BRI trade corridors can help Chipotle compare imported versus local ingredients by product category, manage inspection and customs risk, and reduce dependence on any single supplier region.</p>
-          </article>
-          <article class="bri-card projection">
-            <span>Modeled upside</span>
-            <strong>$11.8M year 1 → $95M year 5</strong>
-            <p>Illustrative projection assumes 8 pilot stores at roughly $1.48M each in year 1, then 45–55 localized urban stores if BRI-enabled sourcing, delivery demand, and consumer acceptance perform well.</p>
-          </article>
+        <div class="market-accordions" aria-label="Market insights and BRI opportunity model">
+          <div class="accordion-column">
+            <article class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="market-growth-detail"><span class="accordion-label">2013 → 2021</span><strong>162%</strong><i aria-hidden="true"></i></button>
+              <div class="accordion-panel" id="market-growth-detail"><div><p>BRI food-import value growth from $18.3B to $47.9B.</p></div></div>
+            </article>
+            <article class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="consumer-detail"><span class="accordion-label">Consumer behavior</span><strong>Digital-first</strong><i aria-hidden="true"></i></button>
+              <div class="accordion-panel" id="consumer-detail"><div><p>Online delivery and QR ordering support a tech-forward launch.</p></div></div>
+            </article>
+            <article class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="trust-detail"><span class="accordion-label">Trust lever</span><strong>Transparency</strong><i aria-hidden="true"></i></button>
+              <div class="accordion-panel" id="trust-detail"><div><p>Foreign brand halo must be reinforced with visible sourcing standards.</p></div></div>
+            </article>
+            <article class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="pricing-detail"><span class="accordion-label">Pricing guardrail</span><strong>Value</strong><i aria-hidden="true"></i></button>
+              <div class="accordion-panel" id="pricing-detail"><div><p>Above local fast food, below premium Western brands, avoiding unlucky “4.”</p></div></div>
+            </article>
+          </div>
+          <div class="accordion-column">
+            <article class="accordion-item">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="bri-detail"><span class="accordion-label">BRI means</span><strong>Belt and Road Initiative</strong><i aria-hidden="true"></i></button>
+              <div class="accordion-panel" id="bri-detail"><div><p>China-led infrastructure, trade, and regulatory-connectivity strategy launched in 2013; it has helped expand food imports from partner nations from $18.3B in 2013 to $47.9B in 2021.</p></div></div>
+            </article>
+            <article class="accordion-item highlight">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="sourcing-detail"><span class="accordion-label">Chipotle connection</span><strong>More flexible sourcing</strong><i aria-hidden="true"></i></button>
+              <div class="accordion-panel" id="sourcing-detail"><div><p>BRI trade corridors can help Chipotle compare imported versus local ingredients by product category, manage inspection and customs risk, and reduce dependence on any single supplier region.</p></div></div>
+            </article>
+            <article class="accordion-item projection">
+              <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="upside-detail"><span class="accordion-label">Modeled upside</span><strong>$11.8M year 1 → $95M year 5</strong><i aria-hidden="true"></i></button>
+              <div class="accordion-panel" id="upside-detail"><div><p>Illustrative projection assumes 8 pilot stores at roughly $1.48M each in year 1, then 45–55 localized urban stores if BRI-enabled sourcing, delivery demand, and consumer acceptance perform well.</p></div></div>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -174,41 +173,24 @@
             <p class="eyebrow">Cultural adaptation</p>
             <h2>What must change for Chipotle to feel locally relevant?</h2>
           </div>
-          <p>The adaptation donut charts translate research themes into business actions.</p>
+          <p>The priority ranking translates research themes into business actions.</p>
         </div>
         <div class="culture-layout">
-          <div class="donut-grid" aria-label="Adaptation priority donut charts">
-            <article class="donut-card" style="--score: 94">
-              <h3>Traditional flavors</h3>
-              <div class="donut"><div><span>High rejection</span><em>Priority</em><strong>94</strong></div></div>
-            </article>
-            <article class="donut-card" style="--score: 90">
-              <h3>Communal meals</h3>
-              <div class="donut"><div><span>Format mismatch</span><em>Priority</em><strong>90</strong></div></div>
-            </article>
-            <article class="donut-card" style="--score: 84">
-              <h3>Food safety trust</h3>
-              <div class="donut"><div><span>Credibility gap</span><em>Priority</em><strong>84</strong></div></div>
-            </article>
-            <article class="donut-card" style="--score: 78">
-              <h3>Price-value fit</h3>
-              <div class="donut"><div><span>Adoption barrier</span><em>Priority</em><strong>78</strong></div></div>
-            </article>
-            <article class="donut-card" style="--score: 74">
-              <h3>Digital convenience</h3>
-              <div class="donut"><div><span>Lost traffic</span><em>Priority</em><strong>74</strong></div></div>
-            </article>
+          <div class="priority-table" role="table" aria-label="Cultural adaptation priorities">
+            <div class="priority-head" role="row"><span>Factor</span><span>Risk if ignored</span><span>Priority</span></div>
+            <div class="priority-row" role="row"><strong>Traditional flavors</strong><span>High rejection</span><div><i style="--w:94%"></i><b>94</b></div></div>
+            <div class="priority-row" role="row"><strong>Communal meals</strong><span>Format mismatch</span><div><i style="--w:90%"></i><b>90</b></div></div>
+            <div class="priority-row" role="row"><strong>Food safety trust</strong><span>Credibility gap</span><div><i style="--w:84%"></i><b>84</b></div></div>
+            <div class="priority-row" role="row"><strong>Price-value fit</strong><span>Adoption barrier</span><div><i style="--w:78%"></i><b>78</b></div></div>
+            <div class="priority-row" role="row"><strong>Digital convenience</strong><span>Lost traffic</span><div><i style="--w:74%"></i><b>74</b></div></div>
           </div>
           <div class="menu-card">
             <img class="menu-photo" src="assets/chinese-rice-bowl.jpg" alt="Chinese-inspired glazed protein rice bowl that suggests a localized Chipotle family bowl" />
             <p class="eyebrow">Prototype offer</p>
             <h3>Sichuan Pepper Steak Family Bowl</h3>
             <p>A localized, shareable format that keeps Chipotle’s customizable DNA while adding Chinese-inspired flavor familiarity.</p>
-            <div class="ingredient-bars">
-              <div><span>Sichuan spice</span><i style="--w: 92%"></i></div>
-              <div><span>Fresh vegetables</span><i style="--w: 86%"></i></div>
-              <div><span>Lean protein</span><i style="--w: 80%"></i></div>
-              <div><span>Shareability</span><i style="--w: 94%"></i></div>
+            <div class="ingredient-tags" aria-label="Product attributes">
+              <span>Sichuan spice</span><span>Fresh vegetables</span><span>Lean protein</span><span>Shareability</span>
             </div>
           </div>
         </div>
@@ -236,19 +218,22 @@
           <p>Click a strategy card to update the scorecard and recommendation logic.</p>
         </div>
         <div class="strategy-layout">
-          <div class="strategy-cards" role="list">
-            <button class="strategy-card active" data-strategy="localize" role="listitem">
-              <span>01</span><h3>Localize menu</h3><p>Chinese-inspired flavors, family meal options, direct outlets, culinary R&D partnerships.</p>
-            </button>
-            <button class="strategy-card" data-strategy="partner" role="listitem">
-              <span>02</span><h3>Joint venture</h3><p>Partner with Quanjude, Haidilao, Xiabu Xiabu, Yum China, distributors, or tech platforms.</p>
-            </button>
-            <button class="strategy-card" data-strategy="popup" role="listitem">
-              <span>03</span><h3>Pop-ups  influencers</h3><p>Shanghai and Beijing pilots with localized items, social buzz, app delivery, and rapid feedback.</p>
-            </button>
+          <div class="strategy-cards accordion-stack" role="list">
+            <article class="accordion-item strategy-item active" role="listitem">
+              <button class="accordion-trigger strategy-card" type="button" data-strategy="localize" aria-expanded="false" aria-controls="strategy-localize-detail"><span class="accordion-number">01</span><strong>Localize menu</strong><i aria-hidden="true"></i></button>
+              <div class="accordion-panel" id="strategy-localize-detail"><div><p>Chinese-inspired flavors, family meal options, direct outlets, culinary R&amp;D partnerships.</p></div></div>
+            </article>
+            <article class="accordion-item strategy-item" role="listitem">
+              <button class="accordion-trigger strategy-card" type="button" data-strategy="partner" aria-expanded="false" aria-controls="strategy-partner-detail"><span class="accordion-number">02</span><strong>Joint venture</strong><i aria-hidden="true"></i></button>
+              <div class="accordion-panel" id="strategy-partner-detail"><div><p>Partner with Quanjude, Haidilao, Xiabu Xiabu, Yum China, distributors, or tech platforms.</p></div></div>
+            </article>
+            <article class="accordion-item strategy-item" role="listitem">
+              <button class="accordion-trigger strategy-card" type="button" data-strategy="popup" aria-expanded="false" aria-controls="strategy-popup-detail"><span class="accordion-number">03</span><strong>Pop-ups + influencers</strong><i aria-hidden="true"></i></button>
+              <div class="accordion-panel" id="strategy-popup-detail"><div><p>Shanghai and Beijing pilots with localized items, social buzz, app delivery, and rapid feedback.</p></div></div>
+            </article>
           </div>
           <div class="scorecard">
-            <canvas id="strategyChart" width="620" height="420" aria-label="Strategy score radar chart" role="img"></canvas>
+            <canvas id="strategyChart" width="760" height="300" aria-label="Strategy score radar chart" role="img"></canvas>
             <div class="score-copy" id="scoreCopy"></div>
           </div>
         </div>
@@ -262,11 +247,11 @@
           </div>
           <p>Recommended launch sequence: test, prove, scale.</p>
         </div>
-        <div class="roadmap-track">
-          <div class="roadmap-step"><span>1</span><h3>Localize</h3><p>Launch Sichuan pepper steak, mild regional sauces, fresh vegetable builds, and family meal bundles.</p></div>
-          <div class="roadmap-step"><span>2</span><h3>Price for adoption</h3><p>Use competitive price endings with lucky “8” and avoid culturally negative “4.”</p></div>
-          <div class="roadmap-step"><span>3</span><h3>Go urban  digital</h3><p>Start in Shanghai and Beijing with QR ordering, delivery apps, and streamlined pickup.</p></div>
-          <div class="roadmap-step"><span>4</span><h3>Build trust</h3><p>Partner with influencers and make ingredient transparency visible in-store and online.</p></div>
+        <div class="roadmap-track accordion-stack">
+          <article class="accordion-item"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="roadmap-localize-detail"><span class="accordion-number">01</span><strong>Localize</strong><i aria-hidden="true"></i></button><div class="accordion-panel" id="roadmap-localize-detail"><div><p>Launch Sichuan pepper steak, mild regional sauces, fresh vegetable builds, and family meal bundles.</p></div></div></article>
+          <article class="accordion-item"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="roadmap-price-detail"><span class="accordion-number">02</span><strong>Price for adoption</strong><i aria-hidden="true"></i></button><div class="accordion-panel" id="roadmap-price-detail"><div><p>Use competitive price endings with lucky “8” and avoid culturally negative “4.”</p></div></div></article>
+          <article class="accordion-item"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="roadmap-digital-detail"><span class="accordion-number">03</span><strong>Go urban + digital</strong><i aria-hidden="true"></i></button><div class="accordion-panel" id="roadmap-digital-detail"><div><p>Start in Shanghai and Beijing with QR ordering, delivery apps, and streamlined pickup.</p></div></div></article>
+          <article class="accordion-item"><button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="roadmap-trust-detail"><span class="accordion-number">04</span><strong>Build trust</strong><i aria-hidden="true"></i></button><div class="accordion-panel" id="roadmap-trust-detail"><div><p>Partner with influencers and make ingredient transparency visible in-store and online.</p></div></div></article>
         </div>
 
         <div class="executive-callout">
@@ -280,8 +265,11 @@
       </section>
     </main>
 
-    <footer class="footer" id="references">
-      <h2>References</h2>
+    <footer class="footer accordion-item references" id="references">
+      <button class="accordion-trigger references-trigger" type="button" aria-expanded="false" aria-controls="references-list">
+        <span><strong>References</strong><small>12 sources</small></span><i aria-hidden="true"></i>
+      </button>
+      <div class="accordion-panel" id="references-list"><div>
       <ol class="references-list">
         <li>Chipotle Mexican Grill Inc SWOT Analysis. (2025). <em>Chipotle Mexican Grill, Inc. SWOT Analysis</em>, 1–7.</li>
         <li>DeMicco, F., Parsa, H., Gao, J., &amp; Narapareddy, V. (2018). Chipotle Mexican grill: A sustainability champion going global with China. In <em>Sage Business Cases</em>. SAGE Publications, Ltd. https://doi.org/10.4135/9781529717617</li>
@@ -296,6 +284,7 @@
         <li>Wang, C. L., &amp; Lin, X. (2009). Migration of Chinese Consumption Values: Traditions, Modernization, and Cultural Renaissance: JBE. <em>Journal of Business Ethics</em>, Suppl. Supplement, 88, 399–409. https://doi.org/10.1007/s10551-009-0308-5</li>
         <li>Zhu, Jing, Liu, Xingyu, &amp; Cao, Lijuan. (2025). The Belt and Road Initiative and China’s diversifying food imports: A perspective on the “Five-pronged approach.” <em>Journal of Asian Economics</em>, 96, 101849. https://doi.org/10.1016/j.asieco.2024.101849</li>
       </ol>
+      </div></div>
     </footer>
 
     <script src="script.js"></script>
