@@ -51,21 +51,10 @@
             <img class="hero-photo hero-photo-chipotle" src="assets/burrito-bowl.jpg" alt="Chipotle-style burrito bowl with beans, guacamole, corn salsa, rice, chips, and sour cream" />
             <img class="hero-photo hero-photo-communal" src="assets/chinese-rice-bowl.jpg" alt="Communal Chinese table setting with rice bowls, tea, mahjong tiles, and shared sides" />
           </div>
-          <div class="score-ring" data-score="86">
-            <svg viewBox="0 0 120 120" role="img" aria-label="Recommended localization fit score 86 out of 100">
-              <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
-              <circle class="ring-progress" cx="60" cy="60" r="52"></circle>
-            </svg>
-            <div>
-              <strong>86</strong>
-              <span>Localization fit</span>
-            </div>
-          </div>
           <div class="metric-row">
+            <div><strong>86</strong><span>Localization fit</span></div>
             <div><strong>$47.9B</strong><span>BRI food imports in 2021</span></div>
             <div><strong>23.5%</strong><span>BRI share of food imports</span></div>
-            <div><strong>$11.8M</strong><span>Projected year-1 China sales</span></div>
-            <div><strong>$95M</strong><span>5-year upside potential</span></div>
           </div>
           <p class="panel-note">Core thesis: Chipotle can win by adapting flavors, formats, pricing, and digital ordering while preserving freshness and ingredient transparency.</p>
         </div>
@@ -137,7 +126,7 @@
             <button class="tab" data-chart="risk" role="tab" aria-selected="false">Entry risk</button>
           </div>
           <div class="chart-stage">
-            <canvas id="mainChart" width="980" height="430" aria-label="Interactive market chart" role="img"></canvas>
+            <canvas id="mainChart" width="980" height="300" aria-label="Interactive market chart" role="img"></canvas>
             <div class="chart-insight" id="chartInsight"></div>
           </div>
         </div>
@@ -174,41 +163,24 @@
             <p class="eyebrow">Cultural adaptation</p>
             <h2>What must change for Chipotle to feel locally relevant?</h2>
           </div>
-          <p>The adaptation donut charts translate research themes into business actions.</p>
+          <p>The priority ranking translates research themes into business actions.</p>
         </div>
         <div class="culture-layout">
-          <div class="donut-grid" aria-label="Adaptation priority donut charts">
-            <article class="donut-card" style="--score: 94">
-              <h3>Traditional flavors</h3>
-              <div class="donut"><div><span>High rejection</span><em>Priority</em><strong>94</strong></div></div>
-            </article>
-            <article class="donut-card" style="--score: 90">
-              <h3>Communal meals</h3>
-              <div class="donut"><div><span>Format mismatch</span><em>Priority</em><strong>90</strong></div></div>
-            </article>
-            <article class="donut-card" style="--score: 84">
-              <h3>Food safety trust</h3>
-              <div class="donut"><div><span>Credibility gap</span><em>Priority</em><strong>84</strong></div></div>
-            </article>
-            <article class="donut-card" style="--score: 78">
-              <h3>Price-value fit</h3>
-              <div class="donut"><div><span>Adoption barrier</span><em>Priority</em><strong>78</strong></div></div>
-            </article>
-            <article class="donut-card" style="--score: 74">
-              <h3>Digital convenience</h3>
-              <div class="donut"><div><span>Lost traffic</span><em>Priority</em><strong>74</strong></div></div>
-            </article>
+          <div class="priority-table" role="table" aria-label="Cultural adaptation priorities">
+            <div class="priority-head" role="row"><span>Factor</span><span>Risk if ignored</span><span>Priority</span></div>
+            <div class="priority-row" role="row"><strong>Traditional flavors</strong><span>High rejection</span><div><i style="--w:94%"></i><b>94</b></div></div>
+            <div class="priority-row" role="row"><strong>Communal meals</strong><span>Format mismatch</span><div><i style="--w:90%"></i><b>90</b></div></div>
+            <div class="priority-row" role="row"><strong>Food safety trust</strong><span>Credibility gap</span><div><i style="--w:84%"></i><b>84</b></div></div>
+            <div class="priority-row" role="row"><strong>Price-value fit</strong><span>Adoption barrier</span><div><i style="--w:78%"></i><b>78</b></div></div>
+            <div class="priority-row" role="row"><strong>Digital convenience</strong><span>Lost traffic</span><div><i style="--w:74%"></i><b>74</b></div></div>
           </div>
           <div class="menu-card">
             <img class="menu-photo" src="assets/chinese-rice-bowl.jpg" alt="Chinese-inspired glazed protein rice bowl that suggests a localized Chipotle family bowl" />
             <p class="eyebrow">Prototype offer</p>
             <h3>Sichuan Pepper Steak Family Bowl</h3>
             <p>A localized, shareable format that keeps Chipotle’s customizable DNA while adding Chinese-inspired flavor familiarity.</p>
-            <div class="ingredient-bars">
-              <div><span>Sichuan spice</span><i style="--w: 92%"></i></div>
-              <div><span>Fresh vegetables</span><i style="--w: 86%"></i></div>
-              <div><span>Lean protein</span><i style="--w: 80%"></i></div>
-              <div><span>Shareability</span><i style="--w: 94%"></i></div>
+            <div class="ingredient-tags" aria-label="Product attributes">
+              <span>Sichuan spice</span><span>Fresh vegetables</span><span>Lean protein</span><span>Shareability</span>
             </div>
           </div>
         </div>
@@ -244,11 +216,11 @@
               <span>02</span><h3>Joint venture</h3><p>Partner with Quanjude, Haidilao, Xiabu Xiabu, Yum China, distributors, or tech platforms.</p>
             </button>
             <button class="strategy-card" data-strategy="popup" role="listitem">
-              <span>03</span><h3>Pop-ups  influencers</h3><p>Shanghai and Beijing pilots with localized items, social buzz, app delivery, and rapid feedback.</p>
+              <span>03</span><h3>Pop-ups + influencers</h3><p>Shanghai and Beijing pilots with localized items, social buzz, app delivery, and rapid feedback.</p>
             </button>
           </div>
           <div class="scorecard">
-            <canvas id="strategyChart" width="620" height="420" aria-label="Strategy score radar chart" role="img"></canvas>
+            <canvas id="strategyChart" width="760" height="300" aria-label="Strategy score radar chart" role="img"></canvas>
             <div class="score-copy" id="scoreCopy"></div>
           </div>
         </div>
@@ -265,7 +237,7 @@
         <div class="roadmap-track">
           <div class="roadmap-step"><span>1</span><h3>Localize</h3><p>Launch Sichuan pepper steak, mild regional sauces, fresh vegetable builds, and family meal bundles.</p></div>
           <div class="roadmap-step"><span>2</span><h3>Price for adoption</h3><p>Use competitive price endings with lucky “8” and avoid culturally negative “4.”</p></div>
-          <div class="roadmap-step"><span>3</span><h3>Go urban  digital</h3><p>Start in Shanghai and Beijing with QR ordering, delivery apps, and streamlined pickup.</p></div>
+          <div class="roadmap-step"><span>3</span><h3>Go urban + digital</h3><p>Start in Shanghai and Beijing with QR ordering, delivery apps, and streamlined pickup.</p></div>
           <div class="roadmap-step"><span>4</span><h3>Build trust</h3><p>Partner with influencers and make ingredient transparency visible in-store and online.</p></div>
         </div>
 
