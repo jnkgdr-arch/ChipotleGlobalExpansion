@@ -81,15 +81,15 @@ function drawMainChart(progress = 1) {
 
   const data = chartData[currentChart];
   const { width, height } = mainCanvas;
-  const pad = 64;
+  const pad = 48;
 
   clear(mainCtx, mainCanvas);
   drawAxes(mainCtx, width, height, pad);
 
   mainCtx.fillStyle = cssVar('--chipotle-brown');
-  mainCtx.font = '800 25px Inter, sans-serif';
+  mainCtx.font = '800 13px Inter, sans-serif';
   mainCtx.textAlign = 'left';
-  mainCtx.fillText(data.title, pad, 38);
+  mainCtx.fillText(data.title, pad, 28);
 
   const max = Math.max(...data.values) * 1.18;
   const chartHeight = height - pad * 2.1;
@@ -120,7 +120,7 @@ function drawMainChart(progress = 1) {
       else mainCtx.lineTo(point.x, point.y);
     });
     mainCtx.strokeStyle = cssVar('--jade');
-    mainCtx.lineWidth = 5;
+    mainCtx.lineWidth = 4;
     mainCtx.lineCap = 'round';
     mainCtx.stroke();
 
@@ -129,7 +129,7 @@ function drawMainChart(progress = 1) {
       mainCtx.strokeStyle = cssVar('--chipotle-red');
       mainCtx.lineWidth = 4;
       mainCtx.beginPath();
-      mainCtx.arc(point.x, point.y, 8, 0, Math.PI * 2);
+      mainCtx.arc(point.x, point.y, 6, 0, Math.PI * 2);
       mainCtx.fill();
       mainCtx.stroke();
       labelPoint(point.x, point.y - 18, `$${point.value}${data.suffix}`);
@@ -157,19 +157,19 @@ function drawMainChart(progress = 1) {
 
 function labelPoint(x, y, text) {
   mainCtx.fillStyle = cssVar('--chipotle-brown');
-  mainCtx.font = '800 18px Inter, sans-serif';
+  mainCtx.font = '800 13px Inter, sans-serif';
   mainCtx.textAlign = 'center';
   mainCtx.fillText(text, x, y);
 }
 
 function labelAxis(x, y, text, maxWidth = 95) {
   mainCtx.fillStyle = '#ffe8a3';
-  mainCtx.font = '900 15px Inter, sans-serif';
+  mainCtx.font = '800 11px Inter, sans-serif';
   mainCtx.textAlign = 'left';
 
   const words = text.split(' ');
   if (words.length > 1) {
-    words.forEach((word, index) => mainCtx.fillText(word, x, y + index * 16, maxWidth));
+    words.forEach((word, index) => mainCtx.fillText(word, x, y + index * 13, maxWidth));
   } else {
     mainCtx.fillText(text, x, y, maxWidth);
   }
@@ -208,15 +208,15 @@ function drawStrategyChart(progress = 1) {
   const strategy = strategies[currentStrategy];
   const { width, height } = strategyCanvas;
   const centerX = width / 2;
-  const centerY = height / 2 + 8;
-  const radius = 140;
+  const centerY = height / 2 + 4;
+  const radius = 92;
 
   clear(strategyCtx, strategyCanvas);
 
   strategyCtx.fillStyle = cssVar('--chipotle-brown');
-  strategyCtx.font = '800 23px Inter, sans-serif';
+  strategyCtx.font = '800 17px Inter, sans-serif';
   strategyCtx.textAlign = 'center';
-  strategyCtx.fillText(`${strategy.name} scorecard`, centerX, 34);
+  strategyCtx.fillText(`${strategy.name} scorecard`, centerX, 24);
 
   for (let ring = 1; ring <= 4; ring += 1) {
     drawPolygon(radius * ring / 4, 'rgba(69,20,0,.12)', false);
@@ -230,8 +230,8 @@ function drawStrategyChart(progress = 1) {
     strategyCtx.lineTo(centerX + Math.cos(angle) * radius, centerY + Math.sin(angle) * radius);
     strategyCtx.stroke();
     strategyCtx.fillStyle = '#fff200';
-    strategyCtx.font = '900 14px Inter, sans-serif';
-    strategyCtx.fillText(label, centerX + Math.cos(angle) * (radius + 48), centerY + Math.sin(angle) * (radius + 32));
+    strategyCtx.font = '800 11px Inter, sans-serif';
+    strategyCtx.fillText(label, centerX + Math.cos(angle) * (radius + 42), centerY + Math.sin(angle) * (radius + 24));
   });
 
   strategyCtx.beginPath();
