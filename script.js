@@ -311,10 +311,21 @@ function initInteractions() {
 
   document.querySelectorAll('.strategy-card').forEach(card => {
     card.addEventListener('click', () => {
-      document.querySelectorAll('.strategy-card').forEach(item => item.classList.remove('active'));
-      card.classList.add('active');
+      document.querySelectorAll('.strategy-item').forEach(item => item.classList.remove('active'));
+      card.closest('.strategy-item')?.classList.add('active');
       currentStrategy = card.dataset.strategy;
       animateStrategy();
+    });
+  });
+
+  document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+      if (!panel) return;
+
+      const willOpen = trigger.getAttribute('aria-expanded') !== 'true';
+      trigger.setAttribute('aria-expanded', String(willOpen));
+      panel.style.gridTemplateRows = willOpen ? '1fr' : '0fr';
     });
   });
 

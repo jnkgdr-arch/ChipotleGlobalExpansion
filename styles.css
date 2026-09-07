@@ -44,3 +44,60 @@ h3{font-size:clamp(1.06rem,1.35vw,1.25rem);line-height:1.25;letter-spacing:-.018
  body{font-size:14.5px}.nav{height:56px;padding-inline:16px}.brand{font-size:13px}.hero-grid,.section{padding:42px 16px}h1{font-size:clamp(2.25rem,11vw,2.7rem)}h2{font-size:1.55rem}.hero-grid{gap:24px}.hero-photo-stack{height:205px}.hero-photo-main{height:145px}.hero-photo-chipotle,.hero-photo-communal{height:76px}.metric-row{grid-template-columns:1fr}.metric-row div{display:flex;align-items:center;gap:12px}.metric-row strong{font-size:25px;min-width:74px}.section-heading.split{gap:10px}.problem-cards,.photo-grid,.kpi-grid,.bri-grid,.swot-grid,.strategy-cards,.roadmap-track{grid-template-columns:1fr}.photo-card,.photo-card.large{height:230px}.priority-head{display:none}.priority-row{grid-template-columns:1fr 1fr;gap:5px}.priority-row>div{grid-column:1/-1}.menu-card{grid-template-columns:1fr}.menu-photo{grid-row:auto;height:190px;margin-bottom:14px}.swot ul{columns:1}.executive-callout{align-items:flex-start;flex-direction:column}.chart-tabs{width:100%;overflow:auto}.tab{white-space:nowrap}.footer{margin:0 12px 20px;padding:20px 16px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ambient{animation:none}.reveal{opacity:1;transform:none;transition:none}}
+
+/* Compact progressive-disclosure system */
+body{font-size:14px;line-height:1.55}
+h1{font-size:clamp(2.125rem,2.65vw,2.375rem);line-height:1.1}
+h2{font-size:clamp(1.375rem,1.8vw,1.625rem);line-height:1.2}
+h3{font-size:clamp(1rem,1.2vw,1.125rem)}
+.hero-grid,.section{padding-top:52px;padding-bottom:52px}
+.hero-grid{gap:32px;padding-top:38px;padding-bottom:46px}
+.section-heading{margin-bottom:20px}
+.hero-subtitle,.section-heading p,.chart-insight,.panel-note{font-size:13px}
+.metric-row strong{font-size:clamp(1.5rem,1.9vw,1.875rem)}
+.problem-cards,.photo-grid,.swot-grid{gap:14px}
+.problem-cards article,.swot{padding:16px 18px}
+.photo-card,.photo-card.large{height:245px}
+.photo-card figcaption strong{font-size:16px}.photo-card figcaption span{font-size:12.5px}
+.chart-shell{padding:12px}.chart-insight{padding:12px}.tab{font-size:11.5px;padding:6px 10px}
+.priority-table{padding:6px 14px}.priority-row{min-height:47px}.menu-card{padding:16px}.menu-card h3{font-size:17px}
+.scorecard{padding:8px 12px}.scorecard canvas{max-height:255px}.score-copy{font-size:13px;padding:12px}
+.executive-callout{padding:18px 20px}.executive-callout h3{font-size:18px}
+
+.market-accordions{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;align-items:start}
+.accordion-column,.accordion-stack{display:grid;gap:8px;align-content:start}
+.accordion-item{overflow:hidden;border:1px solid var(--line);border-radius:10px;background:var(--card);box-shadow:0 8px 24px rgba(28,0,0,.18);backdrop-filter:blur(16px)}
+.accordion-trigger{display:grid;grid-template-columns:minmax(105px,.65fr) minmax(0,1.35fr) 18px;align-items:center;gap:12px;width:100%;min-height:50px;padding:9px 14px;border:0;background:transparent;text-align:left;cursor:pointer;font-family:inherit}
+.accordion-trigger:hover{background:rgba(255,222,104,.1)}
+.accordion-trigger:focus-visible{outline:2px solid var(--jade);outline-offset:-2px}
+.accordion-label{font-size:11px;line-height:1.3;text-transform:uppercase;letter-spacing:.07em;font-weight:800;opacity:.8}
+.accordion-trigger strong{font-size:15px;line-height:1.3;font-weight:800}
+.accordion-number{font-size:14px;font-weight:900;letter-spacing:.08em}
+.accordion-trigger>i{position:relative;width:16px;height:16px;justify-self:end}
+.accordion-trigger>i::before,.accordion-trigger>i::after{content:"";position:absolute;top:7px;width:7px;height:1.5px;border-radius:2px;background:var(--chipotle-brown);transition:transform 180ms ease}
+.accordion-trigger>i::before{left:2px;transform:rotate(45deg)}.accordion-trigger>i::after{right:2px;transform:rotate(-45deg)}
+.accordion-trigger[aria-expanded="true"]>i::before{transform:rotate(-45deg)}.accordion-trigger[aria-expanded="true"]>i::after{transform:rotate(45deg)}
+.accordion-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows 200ms ease}
+.accordion-panel>div{overflow:hidden}
+.accordion-panel p{margin:0;padding:0 14px 12px 131px;font-size:13px;line-height:1.5;opacity:.9}
+.accordion-item.highlight{border-left:3px solid var(--jade)}.accordion-item.projection{border-left:3px solid var(--gold)}
+
+.strategy-layout{gap:12px}.strategy-cards{grid-template-columns:repeat(3,1fr);gap:10px}
+.strategy-card{border:0;border-radius:0;padding:9px 14px;transform:none!important;box-shadow:none!important;background:transparent;grid-template-columns:34px 1fr 18px}
+.strategy-card>span{font-size:14px;line-height:1.2;letter-spacing:.08em}.strategy-card>strong{font-size:15px}
+.strategy-item.active{outline:2px solid var(--jade);outline-offset:-2px;background:rgba(255,222,104,.27)}
+.strategy-item .accordion-panel p{padding-left:60px}
+.roadmap-track{grid-template-columns:repeat(2,1fr);gap:8px}.roadmap-track .accordion-trigger{grid-template-columns:34px 1fr 18px}.roadmap-track .accordion-panel p{padding-left:60px}
+
+.footer.references{max-width:var(--container);margin:0 auto 24px;padding:0;border-radius:10px}
+.references-trigger{grid-template-columns:1fr 18px;padding:10px 16px}
+.references-trigger span{display:flex;align-items:baseline;gap:10px}.references-trigger strong{font-size:16px}.references-trigger small{font-size:11px;opacity:.75}
+.references .accordion-panel>div{padding:0 16px}.references-list{padding:2px 0 14px 18px}.references-list li{font-size:12px;line-height:1.45;margin:4px 0}
+
+@media(max-width:900px){
+ .hero-grid,.section{padding-top:46px;padding-bottom:46px}.market-accordions{grid-template-columns:1fr}.strategy-cards{grid-template-columns:1fr}.roadmap-track{grid-template-columns:1fr 1fr}.photo-card,.photo-card.large{height:230px}
+}
+@media(max-width:620px){
+ h1{font-size:clamp(2.05rem,9vw,2.25rem)}h2{font-size:1.4rem}.hero-grid,.section{padding-top:40px;padding-bottom:40px}.accordion-trigger{grid-template-columns:minmax(88px,.7fr) minmax(0,1.3fr) 18px;min-height:48px;padding:8px 12px;gap:8px}.accordion-trigger strong{font-size:14px}.accordion-panel p{padding:0 12px 11px;font-size:13px}.strategy-item .accordion-panel p,.roadmap-track .accordion-panel p{padding-left:54px}.roadmap-track{grid-template-columns:1fr}.references .accordion-panel>div{padding:0 12px}
+}
+@media(prefers-reduced-motion:reduce){.accordion-panel,.accordion-trigger>i::before,.accordion-trigger>i::after{transition:none}}
